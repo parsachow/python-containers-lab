@@ -77,6 +77,16 @@ for key, value in home_town.items():
 #Ex-6 solution
 
 cohort = []
+for idx, student in enumerate(students):
+    print(idx, student)
+    cohort.append({
+        'student': student,
+        'fav_food': foods[idx]
+    })
+
+for student in cohort:
+    print(student)
+
 
 # Exercise 7
 # Using the list of students and a list comprehension, assign to a variable named awesome_students a new list containing strings similar to this:
@@ -85,6 +95,9 @@ cohort = []
 
 #Ex-7 solution
 
+awesome_students = [student for student in students]
+for student in awesome_students:
+    print(f"{student} is awesome")
 
 
 # Exercise 8
@@ -92,3 +105,6 @@ cohort = []
 # Within the for loop, print each food string.
 
 #Ex-8 solution
+
+for food in [food for food in foods if 'a' in food]:
+  print(food)
